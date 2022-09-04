@@ -1,6 +1,8 @@
 package modelo;
 
 public class EmpleadoPermanentePrincipiante extends EmpleadoPermanente {
+    
+    private static final String TIPO_EMPLEADO = "Permanente Principiante";
 
     public EmpleadoPermanentePrincipiante(String nombre, int legajo, String domicilio, int antiguedad, double sueldoBase) {
         super(nombre, legajo, domicilio, antiguedad, sueldoBase);
@@ -32,6 +34,11 @@ public class EmpleadoPermanentePrincipiante extends EmpleadoPermanente {
         double plus = calcularPlus(this.getAntiguedad());
 
         return this.getSueldoBase() * (1 + plus);
+    }
+
+    @Override
+    public String getTipoEmpleado() {
+        return EmpleadoPermanentePrincipiante.TIPO_EMPLEADO;
     }
 
 }

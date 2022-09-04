@@ -33,10 +33,10 @@ public abstract class Empleado {
 
     @Override
     public String toString() {
-        return "nombre=" + nombre + ", legajo=" + legajo + ", domicilio=" + domicilio;
+        return "nombre=" + nombre + ", legajo=" + legajo + ", domicilio=" + domicilio + ", tipo=" + this.getTipoEmpleado();
     }
     
     public abstract double calcularSueldo();
-    
+    public abstract String getTipoEmpleado();
     
 }

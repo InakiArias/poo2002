@@ -4,6 +4,8 @@ public class EmpleadoTemporario extends Empleado {
 
     private double sueldoHora;
     private int horasTrabajo;
+    
+    private static final String TIPO_EMPLEADO = "Temporario";
 
     public EmpleadoTemporario(String nombre, int legajo, String domicilio, double sueldoHora, int horasTrabajo) {
         super(nombre, legajo, domicilio);
@@ -35,6 +37,11 @@ public class EmpleadoTemporario extends Empleado {
     @Override
     public String toString() {
         return "EmpleadoTemporario{" + super.toString() + ", sueldoHora=" + sueldoHora + ", horasTrabajo=" + horasTrabajo + '}';
+    }
+
+    @Override
+    public String getTipoEmpleado() {
+        return EmpleadoTemporario.TIPO_EMPLEADO;
     }
 
 }
